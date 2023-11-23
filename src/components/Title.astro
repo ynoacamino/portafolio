@@ -1,0 +1,64 @@
+---
+import Perfil from '../components/Perfil.astro';
+
+const socialReds = [
+  {
+    link: "ynoacamino@gmail.com",
+    name: "correo eletronico",
+    src: '/email.svg',
+  }, 
+  {
+    link: "https://github.com/Diegoo11",
+    name: "github",
+    src: '/github.svg',
+  },
+  {
+    link: "https://www.instagram.com/ynoacamino/",
+    name: "instagram",
+    src: '/instagram.svg',
+  },
+  {
+    link: "ynoacamino",
+    name: "discord",
+    src: '/discord.svg',
+  },
+  {
+    link: "https://www.linkedin.com/in/yenaro-noa-camino-06775a240/",
+    name: "linkedin",
+    src: '/linkedin.svg',
+  }
+]
+---
+
+<div class="flex flex-col lg:flex-row justify-between items-center py-16">
+  <div class="text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl flex flex-col font-semibold  gap-2 min-w-fit z-10">
+    <span class="bgColor md:text-6xl text-center lg:text-left xl:text-7xl 2xl:text-8xl font-bold from-black to-black
+    bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] hover:from-cyan-600 hover:via-blue-900 hover:to-blue-500">
+      Yenaro Noa
+    </span>
+    <span class="text-center lg:text-left">
+      Desarrollador web
+    </span>
+    <span class="text-center lg:text-left text-[1.9rem] md:text-[44px] xl:text-6xl 2xl:text-7xl">
+      Estudiante de Ingenieria
+    </span>
+    <div class="flex gap-4 my-5 ml-5 items-center justify-center lg:justify-start">
+      {
+        socialReds.map((i) => (
+          <a class="w-9" href={i.link} target="_blank">
+            <img src={i.src} alt={i.name}/>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+  <div class="w-full mt-[-50px] lg:mt-[-110px] max-w-md">
+    <Perfil />
+  </div> 
+</div>
+<style is:global>
+  .bgColor {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+</style>

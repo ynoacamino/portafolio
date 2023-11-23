@@ -1,6 +1,11 @@
 ---
+import NavBar from '../components/NavBar.astro';
+import ButtonLink from '../components/ButtonLink.astro';
+import Footer from '../components/Footer.astro';
+import MoreOptionsIcon from '../components/react/MoreOptionsIcon.jsx';
+import NavBarMobile from '../components/react/NavBarMobile';
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,44 +13,73 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-one relative h-screen flex flex-col justify-between">
+    <NavBar />
+    <header class="flex justify-between px-8 py-5 font-bold sticky top-0 bg-one md:bg-transparent z-20">
+      <div class="bgColor flex items-center justify-center text-2xl hover:cursor-pointer
+      bg-gradient-to-r from-black to-black
+      hover:from-pink-500 hover:to-orange-500 hover:text-white transition-all py-2">
+        @ynocamino
+      </div>
+      <nav id="navBarH" class="flex items-center justify-center gap-4 font-semibold text-lg text-gray-500">
+        <ButtonLink>Trabajos</ButtonLink>
+        <ButtonLink>Proyectos</ButtonLink>
+        <ButtonLink>Tecnologias</ButtonLink>
+        <ButtonLink>Cerfiticados</ButtonLink>
+      </nav>
+      <NavBarMobile client:visible/>
+    </header>
+    <div class="w-full flex justify-center">
+      <div class="w-full max-w-7xl md:ml-52 px-8">
+        <slot />
+      </div>
+    </div>
+
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  #navBarH {
+    animation: enhance-header linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 100px;
+  }
+
+  @keyframes enhance-header {
+    to {
+      opacity: 0;
+    }
+  }
+
+  #navBarV {
+    animation: enhance ease-in-out both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 100px;
+  }
+
+  @keyframes enhance {
+    from {
+      opacity: 0;
+      translate: -100px 0px;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+  @media (max-width: 950px) {
+    #navBarV {
+      animation: none;
+    }
+    #navBarH {
+      display: none;
+      animation: none;
+    }
+  }
 </style>

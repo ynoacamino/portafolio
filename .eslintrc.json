@@ -1,0 +1,31 @@
+{
+  "extends": ["airbnb","plugin:astro/recommended"],
+  "rules": {
+    "linebreak-style": 0,
+    "import/prefer-default-export": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "import/no-extraneous-dependencies": 0,
+    "eqeqeq": 0,
+    "no-console":0,
+    "no-underscore-dangle": 0,
+    "prefer-regex-literals": 0,
+    "no-param-reassign": 0,
+    "no-restricted-globals": 0,
+    "react/react-in-jsx-scope": 0
+  },
+  "overrides": [
+    {
+      "files": ["*.astro"],
+      "extends": ["airbnb"],
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"]
+      },
+      "rules": {
+      }
+    }
+  ]
+}
