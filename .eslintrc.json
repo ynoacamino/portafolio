@@ -13,7 +13,8 @@
     "prefer-regex-literals": 0,
     "no-param-reassign": 0,
     "no-restricted-globals": 0,
-    "react/react-in-jsx-scope": 0
+    "react/react-in-jsx-scope": 0,
+    "react/prop-types"    : 0
   },
   "overrides": [
     {
@@ -25,6 +26,7 @@
         "extraFileExtensions": [".astro"]
       },
       "rules": {
+        "react/prop-types": 0
       }
     }
   ]

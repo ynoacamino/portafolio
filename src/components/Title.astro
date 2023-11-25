@@ -30,7 +30,7 @@ const socialReds = [
 ]
 ---
 
-<div class="flex flex-col lg:flex-row justify-between items-center py-16">
+<div class="flex flex-col lg:flex-row justify-start lg:justify-between items-center py-16 min-h-[85vh] relative">
   <div class="text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl flex flex-col font-semibold  gap-2 min-w-fit z-10">
     <span class="bgColor md:text-6xl text-center lg:text-left xl:text-7xl 2xl:text-8xl font-bold from-black to-black
     bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] hover:from-cyan-600 hover:via-blue-900 hover:to-blue-500">
@@ -54,7 +54,15 @@ const socialReds = [
   </div>
   <div class="w-full mt-[-50px] lg:mt-[-110px] max-w-md">
     <Perfil />
-  </div> 
+  </div>
+  <div class="absolute bottom-0 flex justify-center items-center right-0 left-0">
+    <img
+      src="/down.svg"
+      alt=""
+      class="w-9 animate-bounce animate-infinite animate-ease-in"
+      id="down"
+    />
+  </div>
 </div>
 <style is:global>
   .bgColor {
