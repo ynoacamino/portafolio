@@ -13,7 +13,7 @@ const frontend = [
   {
     name: "Pagina controladora de tienda online",
     image: "/screen/firstPageBackend.webp",
-    stack: ["MongoDB", "Vite", "Material", "React", "GraphQL", "Apollo", "ReactRouter"],
+    stack: ["MongoDB", "Vite", "Material", "React", "Apollo", "ReactRouter"],
     link: "https://first-page-admin-page.vercel.app/",
     github: "https://github.com/Diegoo11/first-page-adminPage/tree/main",
   },
@@ -55,24 +55,22 @@ const frontend = [
 ];
 const backend = [
   {
-    name: "Tienda online moderna",
-    stack: ["MongoDB", "Vite", "React", "GraphQL", "Apollo", "ReactRouter"],
-    link: "https://first-page-seven.vercel.app/",
-    github: "https://github.com/Diegoo11/first-page/tree/main",
+    name: "Servicio de personalizacion de tienda online moderna",
+    stack: ["MongoDB", "Nodejs", "GraphQL", "Apollo"],
+    github: "https://github.com/Diegoo11/first-page-backend",
   },
   {
-    name: "Pagina controladora de tienda online",
-    stack: ["MongoDB", "Vite", "Material", "React", "GraphQL", "Apollo", "ReactRouter"],
-    link: "https://first-page-admin-page.vercel.app/",
-    github: "https://github.com/Diegoo11/first-page-adminPage/tree/main",
+    name: "Sercio de backend para 3 en raya",
+    stack: ["MongoDB", "Nodejs", "GraphQL", "Apollo", "SocketIO"],
+    github: "https://github.com/Diegoo11/serverTicTacToe",
   },
 ];
 ---
 
-<div class="flex flex-col">
+<div class="flex flex-col items-center my-20">
   <H1 id="proyectos">PROYECTOS</H1>
-  <h2 class="text-center text-6xl font-semibold my-10">Frontend</h2>
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-items-center">
+  <h2 class="text-center text-5xl font-semibold">Frontend</h2>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-items-center max-w-5xl w-full my-10">
     {
       frontend.map((w) => (
         <Card
@@ -85,8 +83,8 @@ const backend = [
       ))
     }
   </div>
-  <h2 class="text-center text-6xl font-semibold my-10">Backend</h2>
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-items-center">
+  <h2 class="text-center text-5xl font-semibold">Backend</h2>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-items-center max-w-5xl w-full my-10">
     {
       backend.map((w) => (
         <Card

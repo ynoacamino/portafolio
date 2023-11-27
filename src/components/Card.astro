@@ -6,14 +6,14 @@ interface Props {
   name: string;
   image: string | void;
   stack: string[];
-  link: string;
+  link: string | void;
   github: string;
 }
 
 const { name, image, stack, link, github } = Astro.props;
 ---
 
-<section class="flex flex-col border-solid border-2 border-black rounded-lg max-w-lg w-full">
+<section class="flex flex-col border-solid border-2 border-black rounded-lg w-full max-w-lg">
   <div class="grid grid-cols-9">
     {
       image && 
@@ -21,7 +21,7 @@ const { name, image, stack, link, github } = Astro.props;
         <Image width="800" height="300" src={image} alt="" class="aspect-video border-solid border-b-2 border-black rounded-t-md"/>
       </div>
     }
-    <div class="col-span-9 flex flex-col gap-12 p-4 xl:p-6">
+    <div class="col-span-9 flex flex-col gap-12 p-3 xl:p-5 justify-between">
       <div class="flex flex-col gap-3">
         <h2 class="text-2xl font-semibold">
           {name}
@@ -40,26 +40,29 @@ const { name, image, stack, link, github } = Astro.props;
         </div>
       </div>
       <div class="w-full grid md:flex grid-cols-2 justify-end items-center gap-4 text-lg md:text-xl ">
-        <a
-          class="hover:cursor-pointer hover:shadow-sm bg-gradient-to-r from-pink-600 via-red-500 to-yellow-500 rounded-md" 
-          href={link}
-          target="_blank"
-        >
-          <div class="
-            flex items-center justify-center gap-4 font-semibold text-lg text-white
-            bg-black hover:bg-transparent transition-all px-4 py-2
-            rounded-md">
-            Preview
-            <img src="/web.svg" alt="preview" class="w-6 m-1 invert"/>
-          </div>
-        </a>
+        {
+          link && 
+          <a
+            class="hover:cursor-pointer hover:shadow-sm bg-gradient-to-r from-pink-600 via-red-500 to-yellow-500 rounded-md" 
+            href={link}
+            target="_blank"
+          >
+            <div class="
+              flex items-center justify-center gap-4 font-semibold text-base text-white
+              bg-black hover:bg-transparent transition-all px-4 py-2
+              rounded-md">
+              Preview
+              <img src="/web.svg" alt="preview" class="w-6 m-1 invert"/>
+            </div>
+          </a>
+        }
         <a
           class="hover:cursor-pointer hover:shadow-sm bg-gradient-to-r from-pink-600 via-red-500 to-yellow-500 rounded-md" 
           href={github}
           target="_blank"
         >
           <div class="
-            flex items-center justify-center gap-4 font-semibold text-lg text-white
+            flex items-center justify-center gap-4 font-semibold text-base text-white
             bg-black hover:bg-transparent transition-all px-4 py-2
             rounded-md">
             Codigo

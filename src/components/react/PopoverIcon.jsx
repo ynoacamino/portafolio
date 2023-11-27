@@ -6,7 +6,7 @@ export default function PopoverIcon({ s }) {
   return (
     <Popover placement="top">
       <PopoverTrigger className="hover:cursor-pointer">
-        <img src={`/icons/${s}.svg`} alt={s} className="w-12 h-12 md:w-14 md:h-14 p-1 hover:bg-gray-300 transition-all rounded-xl" />
+        <img src={`/icons/${s}.svg`} alt={s} className="w-10 h-10 md:w-12 md:h-12 p-1 hover:bg-gray-300 transition-all rounded-xl" />
       </PopoverTrigger>
       <PopoverContent>
         <div className="px-1 py-2">
