@@ -3,8 +3,9 @@ import ButtonLink from "./ButtonLink.astro";
 ---
 
 <nav id="navBarV" class="md:flex flex-col hidden items-start gap-4 justify-center font-semibold text-lg text-gray-800 fixed top-0 bottom-0 left-10">
-  <ButtonLink>Trabajos</ButtonLink>
-  <ButtonLink>Proyectos</ButtonLink>
-  <ButtonLink>Tecnologias</ButtonLink>
-  <ButtonLink>Cerfiticados</ButtonLink>
+  <ButtonLink href="#sobre-mi" target={false}>Sobre mi</ButtonLink>
+  <ButtonLink href="#trabajos" target={false}>Trabajos</ButtonLink>
+  <ButtonLink href="#proyectos" target={false}>Proyectos</ButtonLink>
+  <ButtonLink href="#tecnologias" target={false}>Tecnologias</ButtonLink>
+  <ButtonLink href="#certificados" target={false}>Cerfiticados</ButtonLink>
 </nav>

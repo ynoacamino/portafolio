@@ -1,9 +1,18 @@
 ---
+interface Props {
+  href: string;
+  target: boolean;
+}
+
+const { href, target } = Astro.props;
 ---
 
-<a class="hover:cursor-pointer hover:shadow-sm transition-all w-full border-black border-solid border-2
-  bg-white flex items-center justify-center gap-4 font-semibold text-lg
-  bg-gradient-to-r hover:from-pink-600 hover:to-orange-600 text-black px-4 py-2 rounded-md"
+<a href={href} target={target ? "_blank": "_self"} class="min-w-fit hover:cursor-pointer hover:shadow-sm bg-gradient-to-r from-pink-600 via-red-500 to-yellow-500 rounded-md w-full" 
 >
-  <slot />
+  <div class="w-full
+    flex items-center justify-center gap-4 font-semibold text-lg text-white
+    bg-black hover:bg-transparent transition-all px-4 py-2
+    rounded-md">
+    <slot />
+  </div>
 </a>

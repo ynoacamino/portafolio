@@ -29,19 +29,19 @@ const { title } = Astro.props;
         @ynocamino
       </div>
       <nav id="navBarH" class="flex items-center justify-center gap-4 font-semibold text-lg text-gray-500">
-        <ButtonLink>Trabajos</ButtonLink>
-        <ButtonLink>Proyectos</ButtonLink>
-        <ButtonLink>Tecnologias</ButtonLink>
-        <ButtonLink>Cerfiticados</ButtonLink>
+        <ButtonLink href="#sobre-mi" target={false}>Sobre mi</ButtonLink>
+        <ButtonLink href="#trabajos" target={false}>Trabajos</ButtonLink>
+        <ButtonLink href="#proyectos" target={false}>Proyectos</ButtonLink>
+        <ButtonLink href="#tecnologias" target={false}>Tecnologias</ButtonLink>
+        <ButtonLink href="#certificados" target={false}>Cerfiticados</ButtonLink>
       </nav>
       <NavBarMobile client:visible/>
     </header>
     <div class="w-full flex justify-center">
-      <div class="w-full max-w-7xl md:ml-52 px-8 ">
+      <div class="w-full max-w-7xl md:ml-52 px-4 md:px-8 ">
         <slot />
       </div>
     </div>
-
   </body>
 </html>
 <style is:global>

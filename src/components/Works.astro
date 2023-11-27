@@ -1,13 +1,11 @@
 ---
+import Card from "./Card.astro";
 import H1 from "./H1.astro";
-import Card from "../components/react/Card.jsx";
-import { Image } from "astro:assets";
 
 const works = [
   {
     name: "Pagina de dibulgacion juridica",
     image: "/screen/publicaciones.png",
-    description: "",
     stack: ["MongoDB","Nextjs", "NextUI", "React", "Tailwind"],
     link: "https://miguelsalinasjuridico.com/",
     github: "",
@@ -15,7 +13,6 @@ const works = [
   {
     name: "Pagina de dibulgacion juridica",
     image: "/screen/publicaciones.png",
-    description: "",
     stack: ["MongoDB","Nextjs", "NextUI", "React", "Tailwind"],
     link: "https://miguelsalinasjuridico.com/",
     github: "",
@@ -24,46 +21,17 @@ const works = [
 ---
 
 <div class="flex flex-col">
-  <H1>TRABAJOS</H1>
-  <div class="grid grid-cols-2 gap-6">
+  <H1 id="trabajos">TRABAJOS</H1>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 justify-items-center">
     {
       works.map((w) => (
-        <section class="flex flex-col gap-2 border-solid border-2 border-black rounded-lg p-10">
-          <div class="grid grid-cols-9 gap-8">
-            <div class="col-span-9">
-              <Image width="500" height="282" src={w.image} alt="" class="aspect-video border-solid border-2 border-black rounded-md"/>
-            </div>
-            <div class="col-span-9 flex flex-col gap-8">
-              <div class="flex flex-col gap-3">
-                <h2 class="text-2xl font-semibold">
-                  {w.name}
-                </h2>
-                <div class="flex flex-col gap-2 p-4">
-                  <span class="text-xl font-semibold">
-                    Tecnologias
-                  </span>
-                  <div class="w-full flex items-center justify-start gap-3">
-                    {
-                      w.stack.map((s) => (
-                        <Card s={s} client:visible/>
-                      ))
-                    }
-                  </div>
-                </div>
-              </div>
-              <div class="w-full flex justify-end items-center gap-4">
-                <a href={w.link} target="_blank" class="flex text-xl items-center justify-center gap-4 p-2 px-3 bg-black rounded-[6px] text-white hover:bg-[#383838]">
-                  Preview
-                  <img src="/web.svg" alt="preview" class="w-8 m-1 invert"/>
-                </a>
-                <a href={w.github} target="_blank" class="flex text-xl items-center justify-center gap-4 p-2 px-3 bg-black rounded-[6px] text-white hover:bg-[#383838]">
-                  Code
-                  <img src="/github.svg" alt="github" class="w-8 m-1 invert"/>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Card
+          name={w.name}
+          github={w.github}
+          image={w.image}
+          link={w.link} 
+          stack={w.stack}
+        />
       ))
     }
   </div>
