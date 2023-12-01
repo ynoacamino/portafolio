@@ -1,0 +1,23 @@
+---
+import { backend, frontend } from '../data/projects.js';
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+
+export function getStaticPaths() {
+  return [
+    ...frontend.map((p) => ({params: {project: p.url}})),
+    ...backend.map((p) => ({params: {project: p.url}})),
+  ];
+}
+
+const { project } = Astro.params;
+const { github, name, stack, image, link, url } = [...backend, ...frontend].find((p) => p.url === project);
+
+---
+
+<Layout title="Welcome to Astro.">
+  <Card name={name} stack={stack} github={github} image={image} link={link} url={url} />
+  <div class="h-screen">
+
+  </div>
+</Layout>
