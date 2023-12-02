@@ -1,14 +1,10 @@
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { certificates } from '../../data/certificates';
 
 export default function CertificatesMotion() {
   const [selectedId, setSelectedId] = useState(null);
   const [lastSelected, setLastSelected] = useState(null);
-
-  useEffect(() => {
-    console.log(lastSelected);
-  }, [selectedId]);
 
   return (
     <div className="flex gap-16 max-w-5xl flex-wrap justify-center items-center mt-10 relative">
@@ -26,11 +22,13 @@ export default function CertificatesMotion() {
                 if (c.name !== selectedId) { setSelectedId(c.name); setLastSelected(c.name); }
               }}
               className={`flex justify-start
-              items-center w-44 h-60 border-black border-solid border-2 rounded-lg hover:cursor-pointer
-              bg-white z-10
+              items-center w-44 h-60 border-solid border-2 rounded-lg hover:cursor-pointer
+              bg-white z-10 hover:border-black transition-colors
               ${lastSelected === c.name ? 'z-30' : 'z-10'}
               ${selectedId === c.name
-                && 'w-full max-w-3xl absolute h-auto min-h-max hover:cursor-default m-auto left-0 right-0 top-10 '}
+                ? 'w-full border-black max-w-md flex-col lg:flex-row lg:max-w-3xl absolute h-auto min-h-max hover:cursor-default m-auto left-0 right-0 md:top-10 '
+                : 'border-transparent'
+              }
               `}
             >
               {selectedId === c.name && (
@@ -38,7 +36,8 @@ export default function CertificatesMotion() {
                   src={c.img}
                   alt={c.name}
                   loading="lazy"
-                  className="w-8/12 border-solid border-r-black border-2 rounded-l-lg"
+                  className="w-full lg:w-8/12 border-solid border-b-black
+                  lg:border-r-black border-2 rounded-t-lg lg:rounded-l-lg lg:border-b-0 lg:rounded-t-none"
                 />
               )}
               <div className="flex flex-col gap-6 w-full p-5 justify-center items-center">
@@ -62,7 +61,7 @@ export default function CertificatesMotion() {
                       <img src="/icons/x.svg" className="w-4 h-4" alt="salir" />
                     </button>
                     <a
-                      href="/"
+                      href={c.url}
                       target="_blank"
                       className="hover:cursor-pointer hover:shadow-sm bg-gradient-to-r from-pink-600 via-red-500 to-yellow-500 rounded-md"
                       rel="noreferrer"

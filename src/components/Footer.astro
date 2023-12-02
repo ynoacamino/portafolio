@@ -1,29 +1,33 @@
-<footer class="bg-[#131d25] flex justify-between items-end p-10">
-  <div class="flex flex-col gap-4">
-    <span class="text-2xl font-bold text-white">
-      !Que bien verte por aqui!
-    </span>
-    <div class="text-gray-400 flex flex-col ">
-      <span>
-        ynoacamino@gmail.com
+---
+import ButtonLink from "./ButtonLink.astro";
+---
+
+<footer class=" flex justify-center items-center p-10 py-32">
+  <div class="w-full max-w-5xl flex flex-col justify-center items-center gap-16">
+    <div class="flex flex-col gap-3 justify-center items-center">
+      <span class="text-7xl font-bold text-center">
+        Gracias por visitar
       </span>
-      <span>
-        Hecho por @ynoacamino el 20 de noviembre
-      </span>
+      <div class="text-gray-800 flex flex-col ml-5 font-semibold">
+        <span>
+          Hecho por @ynoacamino el 20 de noviembre
+        </span>
+      </div>
+    </div>
+    <div class=" flex gap-6 flex-wrap">
+      <ButtonLink href="/" target noWidth>
+        Correo Electronico
+      </ButtonLink>
+      <ButtonLink href="/" target noWidth>
+        Instagram
+      </ButtonLink>
+      <ButtonLink href="/" target noWidth>
+        GitHub
+      </ButtonLink>
+      <ButtonLink href="/" target noWidth>
+        Linkedin
+      </ButtonLink>
     </div>
   </div>
-  <div class=" flex gap-6">
-    <a class="text-gray-400 hover:text-gray-100 hover:scale-105 hover:cursor-pointer transition-all">
-      Correo Electronico
-    </a>
-    <a class="text-gray-400 hover:text-gray-100 hover:scale-105 hover:cursor-pointer transition-all">
-      GitHub
-    </a>
-    <a class="text-gray-400 hover:text-gray-100 hover:scale-105 hover:cursor-pointer transition-all">
-      Instagram
-    </a>
-    <a class="text-gray-400 hover:text-gray-100 hover:scale-105 hover:cursor-pointer transition-all">
-      Linkedin
-    </a>
-  </div>
+
 </footer>

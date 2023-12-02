@@ -11,6 +11,8 @@ export default {
       colors: {
         one: '#fefffe',
         two: '#f5f5f5',
+        negro: '#151515',
+        otroNegro: '#1a1a1a',
       },
     },
   },
