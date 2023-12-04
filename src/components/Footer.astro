@@ -1,5 +1,28 @@
 ---
 import ButtonLink from "./ButtonLink.astro";
+
+const socialReds = [
+  {
+    link: "https://github.com/Diegoo11",
+    name: "GitHub",
+    src: '/github.svg',
+  },
+  {
+    link: "https://www.instagram.com/ynoacamino/",
+    name: "Instagram",
+    src: '/instagram.svg',
+  },
+  {
+    link: "https://api.whatsapp.com/send?phone=51935761921",
+    name: "Whatsapp",
+    src: '/icons/whatsapp.svg',
+  },
+  {
+    link: "https://www.linkedin.com/in/yenaro-noa-camino-06775a240/",
+    name: "Linkedin",
+    src: '/linkedin.svg',
+  }
+]
 ---
 
 <footer class=" flex justify-center items-center p-10 py-32">
@@ -15,18 +38,14 @@ import ButtonLink from "./ButtonLink.astro";
       </div>
     </div>
     <div class=" flex gap-6 flex-wrap justify-center items-center">
-      <ButtonLink href="/" target noWidth>
-        Correo Electronico
-      </ButtonLink>
-      <ButtonLink href="/" target noWidth>
-        Instagram
-      </ButtonLink>
-      <ButtonLink href="/" target noWidth>
-        GitHub
-      </ButtonLink>
-      <ButtonLink href="/" target noWidth>
-        Linkedin
-      </ButtonLink>
+      {
+        socialReds.map((d) => (
+          <ButtonLink href={d.link} target noWidth>
+            <img src={d.src} alt={d.name} class="w-7 invert" />
+            {d.name}
+          </ButtonLink>
+        ))
+      }
     </div>
   </div>
 

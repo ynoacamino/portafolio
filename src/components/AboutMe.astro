@@ -1,21 +1,16 @@
 ---
 import { Image } from "astro:assets";
 import H1 from "./H1.astro";
+import Carrucel from './react/Carrucel';
 ---
 
 <div class="flex flex-col justify-start items-center my-20">
   <H1 id="sobre-mi">
     SOBRE MI
   </H1>
-  <div class="grid grid-cols-2 justify-center gap-10">
-    <Image
-      src="/perfil43.webp"
-      alt=""
-      width={300}
-      height={400}
-      class="rounded-lg border-2 border-solid border-black"
-    />
-    <div>
+  <div class="flex flex-col lg:grid grid-cols-2 justify-center gap-y-5 gap-x-10 w-full max-w-md lg:max-w-5xl min-h-[492px]">
+    <Carrucel client:load/>
+    <div class="text-4xl font-semibold ">
       Yenaro Joel Noa Camino
     </div>
   </div>

@@ -1,12 +1,8 @@
 ---
 import Perfil from '../components/Perfil.astro';
+import SocialIcon from './react/SocialIcon';
 
 const socialReds = [
-  {
-    link: "ynoacamino@gmail.com",
-    name: "correo eletronico",
-    src: '/email.svg',
-  }, 
   {
     link: "https://github.com/Diegoo11",
     name: "github",
@@ -18,9 +14,9 @@ const socialReds = [
     src: '/instagram.svg',
   },
   {
-    link: "ynoacamino",
-    name: "discord",
-    src: '/discord.svg',
+    link: "https://api.whatsapp.com/send?phone=51935761921",
+    name: "whatsapp",
+    src: '/icons/whatsapp.svg',
   },
   {
     link: "https://www.linkedin.com/in/yenaro-noa-camino-06775a240/",
@@ -45,9 +41,7 @@ const socialReds = [
     <div class="flex gap-4 my-5 ml-5 items-center justify-center lg:justify-start">
       {
         socialReds.map((i) => (
-          <a class="w-9" href={i.link} target="_blank">
-            <img src={i.src} alt={i.name}/>
-          </a>
+          <SocialIcon link={i.link} name={i.name} src={i.src} client:load/>
         ))
       }
     </div>
