@@ -8,7 +8,7 @@ interface Props {
   stack: string[];
   link: string | void;
   github: string;
-  url: string;
+  url?: string;
 }
 
 const { name, image, stack, link, github, url } = Astro.props;
@@ -70,7 +70,7 @@ const { name, image, stack, link, github, url } = Astro.props;
           bg-black hover:bg-transparent transition-all px-4 py-2
           rounded-md">
           <img src="/github.svg" alt="github" class="w-6 m-1 invert"/>
-          Codigo
+          Código
         </div>
       </a>
     </div>

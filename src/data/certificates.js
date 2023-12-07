@@ -1,6 +1,6 @@
 export const certificates = [
   {
-    name: 'JavaScript Basico',
+    name: 'JavaScript Básico',
     img: '/certificates/jsBasic.webp',
     logo: '/icons/JavaScript.svg',
     url: 'https://www.hackerrank.com/certificates/6772f01d0ffb',
@@ -12,13 +12,13 @@ export const certificates = [
     url: 'https://www.hackerrank.com/certificates/dc01fa5367c3',
   },
   {
-    name: 'Nodejs Basico',
+    name: 'Nodejs Básico',
     img: '/certificates/nodeBasic.webp',
     logo: '/icons/Nodejs.svg',
     url: 'https://www.hackerrank.com/certificates/4e66cf94d50c',
   },
   {
-    name: 'Css Basico',
+    name: 'Css Básico',
     img: '/certificates/cssBasic.webp',
     logo: '/icons/Css.svg',
     url: 'https://www.hackerrank.com/certificates/082736e5e6af',

@@ -19,8 +19,8 @@ export default function NavBarMobile() {
       >
         <ButtonLink>Trabajos</ButtonLink>
         <ButtonLink>Proyectos</ButtonLink>
-        <ButtonLink>Tecnologias</ButtonLink>
-        <ButtonLink>Cerfiticados</ButtonLink>
+        <ButtonLink>Tecnologías</ButtonLink>
+        <ButtonLink>Certificados</ButtonLink>
         <button type="button" aria-label="salir" className="w-9 mt-20" onClick={handleClick}>
           <ExitButton />
         </button>
