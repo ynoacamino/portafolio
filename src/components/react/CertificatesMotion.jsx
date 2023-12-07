@@ -7,7 +7,7 @@ export default function CertificatesMotion() {
   const [lastSelected, setLastSelected] = useState(null);
 
   return (
-    <div className="flex gap-16 max-w-5xl flex-wrap justify-center items-center mt-10 relative">
+    <div className="flex gap-8 max-w-5xl flex-wrap justify-center items-center mt-10 relative ">
       {
         certificates.map((c) => (
           <div
@@ -26,7 +26,7 @@ export default function CertificatesMotion() {
               bg-white z-10 hover:border-black transition-colors
               ${lastSelected === c.name ? 'z-30' : 'z-10'}
               ${selectedId === c.name
-                ? 'w-full border-black max-w-md flex-col lg:flex-row lg:max-w-3xl absolute h-auto min-h-max hover:cursor-default m-auto left-0 right-0 md:top-10 '
+                ? 'w-full border-black max-w-md flex-col lg:flex-row lg:max-w-3xl absolute h-auto hover:cursor-default m-auto left-0 right-0 md:top-10 min-h-[384px]'
                 : 'border-transparent'
               }
               `}

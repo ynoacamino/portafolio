@@ -14,7 +14,7 @@ export default function NavBarMobile() {
       <button type="button" aria-label="más opciones" className="w-9 md:hidden" onClick={handleClick}>
         <MoreOptionsIcon />
       </button>
-      <nav className={`flex flex-col items-center justify-center gap-4 fixed h-screen
+      <nav className={`flex flex-col items-center justify-center gap-4 fixed h-screen z-[1000]
         w-screen bg-one top-0 left-0 ${isOpen || 'left-[-100vh] opacity-0'} md:hidden transition-all`}
       >
         <ButtonLink>Trabajos</ButtonLink>

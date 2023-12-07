@@ -5,10 +5,10 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const images = [
-  '/photos/1.webp',
-  '/photos/2.webp',
   '/photos/3.webp',
   '/photos/4.webp',
+  '/photos/2.webp',
+  '/photos/1.webp',
 ];
 
 const variants = {
@@ -17,13 +17,11 @@ const variants = {
     display: 'none',
   },
   center: {
-    zIndex: 1,
     x: 0,
     opacity: 1,
     display: 'block',
   },
   exit: {
-    zIndex: 0,
     opacity: 0,
     display: 'none',
   },
@@ -43,25 +41,31 @@ export default function Example() {
   };
 
   return (
-    <div className="relative w-full h-min">
-      <AnimatePresence initial={false}>
-        <motion.img
-          className="w-full"
-          key={page}
-          src={images[page]}
-          variants={variants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={{
-            opacity: { duration: 0.2 },
-          }}
-        />
+    <div className="relative w-full aspect-square">
+      <div
+        className="w-full bg-white aspect-square"
+      />
+      <AnimatePresence>
+        {
+          images.map((img, index) => (
+            <motion.img
+              key={img}
+              alt={img}
+              className={`w-full absolute top-0 left-0 ${index === page ? 'z-10' : 'z-0'}`}
+              src={img}
+              variants={variants}
+              animate={index === page ? 'center' : 'exit'}
+              transition={{
+                opacity: { duration: 0.2 },
+              }}
+            />
+          ))
+        }
       </AnimatePresence>
       <motion.button
         type="button"
         className="absolute top-1/2 right-4 flex justify-center items-center w-8 h-8 rounded-full
-         bg-white text-2xl p-2"
+         bg-white text-2xl p-2 z-10"
         onClick={() => paginate(1)}
         whileHover={{ scale: 1.2 }}
         whileTap={{ x: 10 }}
@@ -71,7 +75,7 @@ export default function Example() {
       <motion.button
         type="button"
         className="absolute top-1/2 left-4 flex justify-center text-2xl items-center w-8 h-8 rounded-full
-         bg-white p-2"
+         bg-white p-2 z-10"
         onClick={() => paginate(-1)}
         whileHover={{ scale: 1.2 }}
         whileTap={{ x: -10 }}
