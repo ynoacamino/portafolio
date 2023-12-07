@@ -8,12 +8,12 @@ export const frontend = [
     url: 'Tienda-online-moderna',
   },
   {
-    name: 'Pagina controladora de tienda online',
+    name: 'Página controladora de tienda online',
     image: '/screen/firstPageBackend.webp',
     stack: ['MongoDB', 'Vite', 'Material', 'React', 'Apollo', 'ReactRouter'],
     link: 'https://first-page-admin-page.vercel.app/',
     github: 'https://github.com/Diegoo11/first-page-adminPage/tree/main',
-    url: 'Pagina-controladora-de-tienda-online',
+    url: 'Página-controladora-de-tienda-online',
   },
   {
     name: 'Juego de la vida de John Conway',
@@ -48,7 +48,7 @@ export const frontend = [
     url: 'Tres-en-raya-online-con-Next',
   },
   {
-    name: 'Cronometro para speed cubing',
+    name: 'Cronómetro para speed cubing',
     image: '/screen/cuberTimer.webp',
     stack: ['Firebase', 'React', 'FramerMotion'],
     link: 'https://cubetimer-af0a6.web.app/',
@@ -65,7 +65,7 @@ export const backend = [
     url: 'Servicio-de-personalizacion-de-tienda-online-moderna',
   },
   {
-    name: 'Sercio de backend para 3 en raya',
+    name: 'Servicio de backend para 3 en raya',
     stack: ['MongoDB', 'Nodejs', 'GraphQL', 'Apollo', 'SocketIO'],
     github: 'https://github.com/Diegoo11/serverTicTacToe',
     url: 'Sercio-de-backend-para-3-en-raya',
