@@ -71,4 +71,8 @@ export const technologies = [
     name: 'Tailwind',
     src: 'Tailwind.svg',
   },
+  {
+    name: 'Git',
+    src: 'Git.svg',
+  },
 ];

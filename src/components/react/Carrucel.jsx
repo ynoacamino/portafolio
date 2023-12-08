@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const images = [
   '/photos/3.webp',
   '/photos/4.webp',
-  '/photos/2.webp',
+  '/photos/1.webp',
 ];
 
 const variants = {

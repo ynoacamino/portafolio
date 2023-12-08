@@ -1,0 +1,46 @@
+---
+import H1 from "./H1.astro";
+
+const techs = [
+  {
+    name: "React",
+    src: "/icons/React.svg",
+  },
+  {
+    name: "Astro",
+    src: "/icons/Astro.svg",
+  },
+  {
+    name: "Framer Motion",
+    src: "/icons/FramerMotion.svg",
+  },
+  {
+    name: "Tailwind",
+    src: "/icons/Tailwind.svg",
+  },
+  {
+    name: "NextUI",
+    src: "/icons/NextUI.svg",
+  },
+]
+---
+
+<div class="flex flex-col items-center my-20">
+  <H1 id="consejos">Este sitio fue creado con</H1>
+  <div class="flex justify-center items-center max-w-5xl w-full my-10 mt-16 gap-16 flex-wrap">
+    {
+      techs.map((t) => (
+        <div class="flex flex-col justify-center items-center gap-6 font-semibold text-xl">
+          <img
+            class="w-32 h-32"
+            src={t.src}
+            alt={t.name}
+          />
+          <span>
+            {t.name}
+          </span>
+        </div>
+      ))
+    }
+  </div>
+</div>

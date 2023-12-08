@@ -1,5 +1,6 @@
 ---
 import Perfil from '../components/Perfil.astro';
+import Name from './react/Name';
 import SocialIcon from './react/SocialIcon';
 
 const socialReds = [
@@ -28,16 +29,15 @@ const socialReds = [
 
 <div class="flex flex-col lg:flex-row justify-start lg:justify-between items-center py-16 min-h-[85vh] relative">
   <div class="text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl flex flex-col font-semibold  gap-2 min-w-fit z-10">
-    <span class="bgColor md:text-6xl text-center lg:text-left xl:text-7xl 2xl:text-8xl font-bold from-black to-black
-    bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] hover:from-cyan-600 hover:via-blue-900 hover:to-blue-500">
-      Yenaro Noa
-    </span>
-    <span class="text-center lg:text-left">
-      Desarrollador web
-    </span>
-    <span class="text-center lg:text-left text-[1.9rem] md:text-[44px] xl:text-6xl 2xl:text-7xl">
-      Estudiante de Ingeniería
-    </span>
+    <h1 class="flex flex-col gap-2">    
+      <Name client:load />
+      <span class="text-center lg:text-left">
+        Desarrollador web
+      </span>
+      <span class="text-center lg:text-left text-[1.9rem] md:text-[44px] xl:text-6xl 2xl:text-7xl">
+        Estudiante de Ingeniería
+      </span>
+    </h1>
     <div class="flex gap-4 my-5 ml-5 items-center justify-center lg:justify-start">
       {
         socialReds.map((i) => (
@@ -59,8 +59,5 @@ const socialReds = [
   </div>
 </div>
 <style is:global>
-  .bgColor {
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-  }
+
 </style>

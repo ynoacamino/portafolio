@@ -70,4 +70,16 @@ export const backend = [
     github: 'https://github.com/Diegoo11/serverTicTacToe',
     url: 'Sercio-de-backend-para-3-en-raya',
   },
+  {
+    name: 'Servicio de backend para 3 en raya con Express',
+    stack: ['MongoDB', 'Nodejs', 'Express', 'SocketIO'],
+    github: 'https://github.com/Diegoo11/serverTicTacToe/tree/express-api',
+    url: 'Sercio-de-backend-para-3-en-raya',
+  },
+  {
+    name: 'Servicio de backend para 3 en raya',
+    stack: ['MySql', 'Nodejs', 'GraphQL', 'Apollo', 'SocketIO'],
+    github: 'https://github.com/Diegoo11/serverTicTacToe',
+    url: 'Sercio-de-backend-para-3-en-raya',
+  },
 ];
