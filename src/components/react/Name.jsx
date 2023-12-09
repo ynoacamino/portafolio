@@ -1,10 +1,17 @@
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 export default function Name() {
+  const [theme, setTheme] = useState(null);
+
+  useEffect(() => {
+    setTheme(localStorage.getItem('theme'));
+  }, []);
+
   return (
     <motion.span
       animate={{
-        color: ['#000000', '#dc2626', '#d97706', '#16a34a', '#2563eb', '#7e22ce', '#000000'],
+        color: [theme === 'dark' ? '#ffffff' : '#000000', '#dc2626', '#d97706', '#16a34a', '#2563eb', '#7e22ce', theme === 'dark' ? '#ffffff' : '#000000'],
       }}
       transition={{
         duration: 20,

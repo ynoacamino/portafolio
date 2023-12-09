@@ -9,7 +9,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        one: '#fefffe',
+        one: {
+          DEFAULT: '#fefffe',
+          dark: '#1a1a1a',
+          light: '#fefffe',
+        },
         two: '#f5f5f5',
         negro: '#151515',
         otroNegro: '#1a1a1a',

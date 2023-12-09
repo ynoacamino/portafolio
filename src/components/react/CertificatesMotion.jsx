@@ -23,7 +23,7 @@ export default function CertificatesMotion() {
               }}
               className={`flex justify-start
               items-center w-44 h-60 border-solid border-2 rounded-lg hover:cursor-pointer
-              bg-white z-10 hover:border-black transition-colors
+              bg-one dark:bg-one-dark z-10 hover:border-black dark:hover:border-white transition-colors
               ${lastSelected === c.name ? 'z-30' : 'z-10'}
               ${selectedId === c.name
                 ? 'w-full border-black max-w-md flex-col lg:flex-row lg:max-w-3xl absolute h-auto hover:cursor-default m-auto left-0 right-0 md:top-10 min-h-[384px]'

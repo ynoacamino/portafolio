@@ -15,7 +15,7 @@ export default function NavBarMobile() {
         <MoreOptionsIcon />
       </button>
       <nav className={`flex flex-col items-center justify-center gap-4 fixed h-screen z-[1000]
-        w-screen bg-one top-0 left-0 ${isOpen || 'left-[-100vh] opacity-0'} md:hidden transition-all`}
+        w-screen bg-one dark:bg-one-dark top-0 left-0 ${isOpen || 'left-[-100vh] opacity-0'} md:hidden transition-all`}
       >
         <ButtonLink>Trabajos</ButtonLink>
         <ButtonLink>Proyectos</ButtonLink>

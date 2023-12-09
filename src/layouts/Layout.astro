@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar.astro';
 import ButtonLink from '../components/ButtonLink.astro';
 import Footer from '../components/Footer.astro';
 import NavBarMobile from '../components/react/NavBarMobile';
+import ChangeTheme from '../components/react/ChangeTheme';
 
 interface Props {
   title: string;
@@ -12,7 +13,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Informacion, trabajos, proyectos, y estudios de @ynoacamino, Yenaro Joel Noa Camino, Arequipa, Peru" />
@@ -28,21 +29,24 @@ const { title } = Astro.props;
     <meta property="og:image" content="https://cdn.discordapp.com/attachments/772232222220615710/1182424763184988221/image.png?ex=6584a5df&is=657230df&hm=ae6030022f956cd3eeed51678a126371fbc88a871bfce288ddf6adcd24ac0717&">
     
   </head>
-  <body class="bg-one relative flex flex-col justify-between">
+  <body class="bg-one dark:bg-one-dark relative flex flex-col justify-between">
     <NavBar />
-    <header class="flex w-full justify-between px-8 py-5 font-bold sticky top-0 bg-one md:bg-transparent z-20">
+    <header class="flex w-full justify-between px-8 py-5 font-bold sticky top-0 bg-one dark:bg-one-dark md:bg-transparent z-20">
       <div class="flex items-center justify-center text-2xl hover:cursor-pointer
-      text-black py-2">
+     py-2">
         @ynocamino
       </div>
-      <nav id="navBarH" class="flex items-center justify-center gap-4 font-semibold text-lg text-gray-500">
-        <ButtonLink href="#sobre-mi" target={false}>Sobre mi</ButtonLink>
-        <ButtonLink href="#trabajos" target={false}>Trabajos</ButtonLink>
-        <ButtonLink href="#proyectos" target={false}>Proyectos</ButtonLink>
-        <ButtonLink href="#tecnologias" target={false}>Tecnologías</ButtonLink>
-        <ButtonLink href="#certificados" target={false}>Certificados</ButtonLink>
-      </nav>
-      <NavBarMobile client:visible/>
+      <div class="flex justify-center items-center gap-4">
+        <nav id="navBarH" class="flex items-center justify-center gap-4 font-semibold text-lg text-gray-500">
+          <ButtonLink href="#sobre-mi" target={false}>Sobre mi</ButtonLink>
+          <ButtonLink href="#trabajos" target={false}>Trabajos</ButtonLink>
+          <ButtonLink href="#proyectos" target={false}>Proyectos</ButtonLink>
+          <ButtonLink href="#tecnologias" target={false}>Tecnologías</ButtonLink>
+          <ButtonLink href="#certificados" target={false}>Certificados</ButtonLink>
+        </nav>
+        <ChangeTheme client:load/>
+        <NavBarMobile client:visible/>
+      </div>
     </header>
     <div class="w-full flex justify-center">
       <div class="w-full max-w-7xl md:ml-52 px-4 md:px-8 ">
@@ -62,6 +66,7 @@ const { title } = Astro.props;
   @keyframes enhance-header {
     to {
       opacity: 0;
+      display: none;
     }
   }
 

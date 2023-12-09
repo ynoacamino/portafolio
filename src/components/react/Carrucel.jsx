@@ -42,7 +42,7 @@ export default function Example() {
   return (
     <div className="relative w-full aspect-square">
       <div
-        className="w-full bg-white aspect-square"
+        className="w-full bg-one dark:bg-one-dark aspect-square"
       />
       <AnimatePresence>
         {
@@ -64,7 +64,7 @@ export default function Example() {
       <motion.button
         type="button"
         className="absolute top-1/2 right-4 flex justify-center items-center w-8 h-8 rounded-full
-         bg-white text-2xl p-2 z-10"
+         bg-one text-2xl p-2 z-10"
         onClick={() => paginate(1)}
         whileHover={{ scale: 1.2 }}
         whileTap={{ x: 10 }}
@@ -74,7 +74,7 @@ export default function Example() {
       <motion.button
         type="button"
         className="absolute top-1/2 left-4 flex justify-center text-2xl items-center w-8 h-8 rounded-full
-         bg-white p-2 z-10"
+         bg-one p-2 z-10"
         onClick={() => paginate(-1)}
         whileHover={{ scale: 1.2 }}
         whileTap={{ x: -10 }}

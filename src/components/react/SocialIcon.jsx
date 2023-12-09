@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function SocialIcon({ link, name, src }) {
   return (
     <motion.a
-      className="w-9"
+      className="w-9 dark:invert"
       href={link}
       target="_blank"
       animate={{
