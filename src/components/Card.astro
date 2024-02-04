@@ -7,18 +7,18 @@ interface Props {
   image: string | void;
   stack: string[];
   link: string | void;
-  github: string;
+  github?: string;
   url?: string;
 }
 
-const { name, image, stack, link, github, url } = Astro.props;
+const { name, image, stack, link, github } = Astro.props;
 ---
 
 <div class="grid grid-cols-9 border-solid border-2 border-black dark:border-[#464646] rounded-lg w-full max-w-lg">
   {
     image && 
     <div class="col-span-9">
-      <Image width="800" height="300" src={image} alt="" class="aspect-video border-solid border-b-2 border-black dark:border-white rounded-t-md"/>
+      <Image width="800" height="300" src={image} alt="" class="aspect-video border-solid border-b-2 border-black dark:border-white rounded-t-md object-cover"/>
     </div>
   }
   <div class="col-span-9 flex flex-col gap-12 p-3 xl:p-5 justify-between">
@@ -33,7 +33,7 @@ const { name, image, stack, link, github, url } = Astro.props;
         <div class="w-full flex items-center justify-start gap-1 flex-wrap">
           {
             stack.map((s) => (
-              <PopoverIcon s={s} client:visible/>
+              <PopoverIcon s={s} client:only/>
             ))
           }
         </div>
@@ -60,19 +60,23 @@ const { name, image, stack, link, github, url } = Astro.props;
           
         </div>
       }
-      <a
-        class="hover:cursor-pointer hover:shadow-sm bg-gradient-to-r from-pink-600 via-red-500 to-yellow-500 rounded-md" 
-        href={github}
-        target="_blank"
-      >
-        <div class="
-          flex items-center justify-center gap-4 font-semibold text-base text-white
-          bg-black hover:bg-transparent transition-all px-4 py-2
-          rounded-md">
-          <img src="/github.svg" alt="github" class="w-6 m-1 invert"/>
-          Código
-        </div>
-      </a>
+      {
+        github && (
+          <a
+            class="hover:cursor-pointer hover:shadow-sm bg-gradient-to-r from-pink-600 via-red-500 to-yellow-500 rounded-md" 
+            href={github}
+            target="_blank"
+          >
+            <div class="
+              flex items-center justify-center gap-4 font-semibold text-base text-white
+              bg-black hover:bg-transparent transition-all px-4 py-2
+              rounded-md">
+              <img src="/github.svg" alt="github" class="w-6 m-1 invert"/>
+              Código
+            </div>
+          </a>
+        )
+      }
     </div>
   </div>
 </div>

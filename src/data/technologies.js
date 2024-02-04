@@ -75,4 +75,24 @@ export const technologies = [
     name: 'Git',
     src: 'Git.svg',
   },
+  {
+    name: 'Go',
+    src: 'Go.svg',
+  },
+  {
+    name: 'Cloudinary',
+    src: 'Cloudinary.svg',
+  },
+  {
+    name: 'Fiber',
+    src: 'Fiber.svg',
+  },
+  {
+    name: 'Axios',
+    src: 'Axios.svg',
+  },
+  {
+    name: 'TypeScript',
+    src: 'TypeScript.svg',
+  },
 ];
