@@ -1,5 +1,26 @@
 export const frontend = [
   {
+    name: 'Blog de publicaciones',
+    image: '/screen/blog-page.webp',
+    stack: ['MongoDB', 'Nextjs', 'NextUI', 'React', 'Tailwind', 'Cloudinary'],
+    link: 'https://blog-page-rust.vercel.app/',
+    github: 'https://github.com/ynoacamino/blog-page/tree/main',
+  },
+  {
+    name: 'Pagina de administrador de blog de publicaciones',
+    image: '/screen/admin-blog-page.webp',
+    stack: ['MongoDB', 'Nextjs', 'NextUI', 'React', 'Tailwind', 'Cloudinary'],
+    link: 'https://blog-page-rust.vercel.app/',
+    github: 'https://github.com/ynoacamino/blog-admin-page/tree/main',
+  },
+  {
+    name: 'Pagina para compartir archivos',
+    image: '/screen/noaUpload.webp',
+    stack: ['Cloudinary', 'Go', 'Fiber', 'React', 'Tailwind', 'Nextjs', 'Axios'],
+    link: 'https://noa-upload-page.vercel.app/',
+    github: 'https://github.com/ynoacamino/noa-upload-page/tree/main',
+  },
+  {
     name: 'Tienda online moderna',
     image: '/screen/firstPageFrontend.webp',
     stack: ['MongoDB', 'Vite', 'React', 'GraphQL', 'Apollo', 'ReactRouter'],
@@ -47,13 +68,6 @@ export const frontend = [
     stack: ['Firebase', 'React', 'FramerMotion'],
     link: 'https://cubetimer-af0a6.web.app/',
     github: 'https://github.com/ynoacamino/cube-for-Diegoo',
-  },
-  {
-    name: 'Pagina para compartir archivos',
-    image: '/screen/noaUpload.webp',
-    stack: ['Cloudinary', 'Go', 'Fiber', 'React', 'Tailwind', 'Nextjs', 'Axios'],
-    link: 'https://vercel.com/diegoo11/noa-upload-page',
-    github: 'https://github.com/ynoacamino/noa-upload-page/tree/main',
   },
 ];
 
