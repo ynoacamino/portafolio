@@ -15,11 +15,11 @@ const { href, target, noWidth, classAdd } = Astro.props;
   class={`min-w-fit hover:cursor-pointer hover:shadow-sm bg-gradient-to-r from-pink-600
    via-red-500 to-yellow-500 rounded-md ${classAdd} ${noWidth ? "" : "w-full"}
    `
-   }
+}
 >
   <div class="w-full
     flex items-center justify-center gap-4 font-semibold text-base text-white
-    bg-black hover:bg-transparent transition-all px-4 py-2
+    bg-black hover:bg-transparent transition-all px-4 py-2 dark:bg-zinc-700 dark:hover:bg-transparent
     rounded-md">
     <slot />
   </div>

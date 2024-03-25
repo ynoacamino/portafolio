@@ -2,14 +2,14 @@ export const frontend = [
   {
     name: 'Tienda online funcinal',
     image: '/screen/tiendaFuncional.webp',
-    stack: ['Nextjs', 'React', 'Prisma', 'Tailwind', 'MercadoPago', 'Cloudinary', "Shadcn"],
+    stack: ['Nextjs', 'React', 'Prisma', 'Tailwind', 'MercadoPago', 'Cloudinary', 'Shadcn'],
     link: 'https://e-commerce-ynoacamino.vercel.app/',
     github: 'https://github.com/ynoacamino/e-commerce',
   },
   {
     name: 'Pagina de administrador de tienda online',
     image: '/screen/adminTiendaOnline.webp',
-    stack: ['Nextjs', 'React', 'Prisma', 'Tailwind', 'MercadoPago', 'Cloudinary', "Shadcn"],
+    stack: ['Nextjs', 'React', 'Prisma', 'Tailwind', 'MercadoPago', 'Cloudinary', 'Shadcn'],
     link: 'https://admin-e-commerce-ynoacamino.vercel.app/',
     github: 'https://github.com/ynoacamino/admin-e-commerce',
   },

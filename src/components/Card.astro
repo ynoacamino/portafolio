@@ -14,23 +14,23 @@ interface Props {
 const { name, image, stack, link, github } = Astro.props;
 ---
 
-<div class="grid grid-cols-9 border-solid border-2 border-black dark:border-[#464646] rounded-lg w-full max-w-lg">
+<div class="grid grid-cols-9 border-solid border-[1px] border-zinc-400 dark:border-[#464646] rounded-lg w-full max-w-lg shadow-lg shadow-zinc-200 dark:shadow-zinc-950">
   {
-    image && 
-    <div class="col-span-9">
-      <Image width="800" height="300" src={image} alt="" class="aspect-video border-solid border-b-2 border-black dark:border-white rounded-t-md object-cover"/>
-    </div>
+    image && link &&
+    <a class="col-span-9" href={link}>
+      <Image width="800" height="300" src={image} alt="" class="aspect-video border-solid border-b-[1px] border-zinc-400 dark:border-white rounded-t-lg object-cover"/>
+    </a>
   }
   <div class="col-span-9 flex flex-col gap-12 p-3 xl:p-5 justify-between">
     <div class="flex flex-col gap-3">
       <h3 class="text-2xl font-semibold">
         {name}
       </h3>
-      <div class="flex flex-col gap-2 pl-4">
-        <span class="text-xl font-semibold text-gray-700">
+      <div class="flex flex-col gap-2 pl-4 items-start justify-start">
+        <span class="text-xl font-semibold text-gray-700 dark:text-gray-300">
           Tecnologías
         </span>
-        <div class="w-full flex items-center justify-start gap-1 flex-wrap">
+        <div class="flex items-center justify-start gap-1 flex-wrap dark:bg-zinc-200 rounded-md px-2 py-1">
           {
             stack.map((s) => (
               <PopoverIcon s={s} client:only/>
@@ -50,7 +50,7 @@ const { name, image, stack, link, github } = Astro.props;
           <div class="
             flex items-center justify-center gap-4 font-semibold text-base text-white
             bg-black hover:bg-transparent transition-all px-4 py-2
-            rounded-md">
+            rounded-md dark:bg-zinc-700 dark:hover:bg-transparent">
             <img src="/web.svg" alt="preview" class="w-6 m-1 invert"/>
             Preview
           </div>
@@ -70,7 +70,7 @@ const { name, image, stack, link, github } = Astro.props;
             <div class="
               flex items-center justify-center gap-4 font-semibold text-base text-white
               bg-black hover:bg-transparent transition-all px-4 py-2
-              rounded-md">
+              rounded-md dark:bg-zinc-700 dark:hover:bg-transparent">
               <img src="/github.svg" alt="github" class="w-6 m-1 invert"/>
               Código
             </div>

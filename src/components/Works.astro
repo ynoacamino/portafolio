@@ -1,27 +1,101 @@
 ---
 import Card from "./Card.astro";
 import H1 from "./H1.astro";
+import WorkCard from "./WorkCard.astro";
 
 const works = [
   {
     name: "Página de divulgación jurídica",
-    image: "/screen/publicaciones.png",
+    video: "https://res.cloudinary.com/dux0sb99g/video/upload/v1711391404/xfl0r1vhclseim8ioi2u.mp4",
     stack: ["MongoDB","Nextjs", "NextUI", "React", "Tailwind"],
     link: "https://miguelsalinasjuridico.com/",
+    description: [
+      "Pagina web desarrollada para un cliente, con el objetivo de publicar contenido jurídico",
+      "Se realizó un trabajo de SEO para mejorar la visibilidad de la página en los motores de búsqueda, de modo que aparesca en los primeros resultados de búsqueda",
+      "El cliente pidio poder hacer publicaciones, editarlas y eliminarlas, por lo que se desarrollo un sistema de gestión de contenidos, en la cual puede subir: imagenes, texto, videos y pdfs",
+    ],
+    important_points: [
+      "Diseño y desarrollo de la página web",
+      "SEO (Optimización para motores de búsqueda)",
+      "Sistema de gestión de contenidos",
+      "Diseño de la base de datos",
+      "Pagina de administrador para gestionar las publicaciones",
+    ],
+  },
+  {
+    name: "Pagina web para el capitulo estudiantil de la IEEE de la Universidad Nacional de San Agustin",
+    video: "https://res.cloudinary.com/dux0sb99g/video/upload/v1711391430/hzr2ulkgoc2xcreko5wm.mp4",
+    stack: ["Nextjs", "ShadCn", "React", "Tailwind", "TypeScript", "Vercel"],
+    link: "https://ieee-ynoacamino.vercel.app/",
+    description: [
+      "Pagina web desarrollada para el concurso del capitulo estudiantil de la IEEE de la Universidad Nacional de San Agustin",
+      "El diseño de la pagina fue inspirado en la marca de la IEEE, como se especifico en las bases del concurso, por lo que se tuvo que seguir determinado patrones de diseño",
+      "Ademas se opto por disenar el tema oscuro de la pagina, para darle un toque mas moderno",
+      "Toda la pagina configurable desde un archivo de configuración, para que el cliente pueda cambiar el contenido de la pagina sin tener que preocuparse por el código",
+    ],
+    important_points: [
+      "Diseño y desarrollo de la página web acorde a la marca",
+      "Configuración de la pagina desde un archivo de configuración",
+      "Tema oscuro",
+      "Optimización para motores de búsqueda",
+    ],
+  },
+  {
+    name: "Tienda online (prototipo)",
+    video: "https://res.cloudinary.com/dux0sb99g/video/upload/v1711391354/z4fuhocrihr3se64xflx.mp4",
+    stack: ['Nextjs', 'React', 'Prisma', 'Tailwind', 'MercadoPago', 'Cloudinary', 'Shadcn'],
+    link: 'https://e-commerce-ynoacamino.vercel.app/',
+    description: [
+      "Tienda online desarrollada como prototipo, para mostrar las funcionalidades de una tienda online",
+      "Se desarrollo un sistema de autenticación, para que los usuarios puedan registrarse, iniciar sesión y cerrar sesión",
+      "Se desarrollo un sistema de carrito de compras, en el cual los usuarios pueden agregar productos, eliminar productos y realizar la compra",
+      "La tienda cuenta con un sistema de pagos, en el cual los usuarios pueden pagar con tarjeta de crédito, usando la pasarela de pagos de MercadoPago",
+      "SE agergo un buscador de productos, para que los usuarios puedan buscar productos por su nombre o por su categoría",
+      "Ademas se desarrollo un sistema de administración, en el cual los administradores pueden agregar productos, editar productos y eliminar productos",
+    ],
+    important_points: [
+      "Diseño y desarrollo de la tienda online",
+      "Sistema de autenticación",
+      "Sistema de carrito de compras",
+      "Sistema de pagos",
+      "Sistema de administración de productos",
+      "Tema oscuro"
+    ],
+  },
+  {
+    name: "Administrador de tienda online (prototipo)",
+    video: "https://res.cloudinary.com/dazt6g3o1/video/upload/v1711391193/k43naabhv5kvquzzajhc.mp4",
+    stack: ['Nextjs', 'React', 'Prisma', 'Tailwind', 'MercadoPago', 'Cloudinary', 'Shadcn'],
+    link: 'https://admin-e-commerce-ynoacamino.vercel.app/',
+    description: [
+      "Administrador de tienda online desarrollado como prototipo, para mostrar las funcionalidades de un administrador de tienda online",
+      "Se desarrollo un sistema de autenticación, para que solo los administradores puedan iniciar sesión y cerrar sesión (actulamente funciona para cualquier usuario, para que lo puedan probar)",
+      "Se desarrollo un sistema de administración de productos, en el cual los administradores pueden agregar productos, editar productos y eliminar productos",
+      "Ademas se desarrollo un sistema de administración de usuarios, en el cual los administradores pueden ver los usuarios registrados y eliminarlos",
+    ],
+    important_points: [
+      "Diseño y desarrollo del administrador de tienda online",
+      "Sistema de autenticación",
+      "Sistema de administración de productos",
+      "Sistema de administración de usuarios",
+      "Tema oscuro"
+    ],
   },
 ];
 ---
 
 <div class="flex flex-col items-center my-20">
   <H1 id="trabajos">TRABAJOS</H1>
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-items-center max-w-5xl">
+  <div class="grid grid-cols-1  gap-8 justify-items-center max-w-5xl">
     {
       works.map((w) => (
-        <Card
+        <WorkCard
           name={w.name}
-          image={w.image}
+          video={w.video}
           link={w.link} 
           stack={w.stack}
+          description={w.description}
+          important_points={w.important_points}
         />
       ))
     }
