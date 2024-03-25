@@ -22,7 +22,7 @@ export default function ChangeTheme() {
   return (
     <button
       onClick={handdleClick}
-      className={`w-16 h-8 rounded-full p-1 border-solid border-2 border-black dark:border-white flex items-center ${theme === 'dark' ? 'justify-end' : 'justify-start'}`}
+      className={`w-16 h-8 rounded-full p-1 border-solid border-2 bg-background dark:bg-background border-black dark:border-white flex items-center ${theme === 'dark' ? 'justify-end' : 'justify-start'}`}
       aria-label="button"
       type="button"
     >
