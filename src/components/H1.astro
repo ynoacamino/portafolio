@@ -1,10 +1,10 @@
 ---
 interface Props {
-  id : string;
+  id: string;
 }
-const {id} = Astro.props;
+const { id } = Astro.props;
 ---
 
 <h2 id={id} class="font-bold text-5xl md:text-6xl text-center mb-10 mt-20">
-  <slot>
+  <slot />
 </h2>

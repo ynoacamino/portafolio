@@ -1,13 +1,14 @@
 ---
 import Card from "./Card.astro";
 import H1 from "./H1.astro";
-import WorkCard from "./WorkCard.astro";
+import WorkCard from "../components/react/WorkCard";
 
 const works = [
   {
     name: "Página de divulgación jurídica",
-    video: "https://res.cloudinary.com/dux0sb99g/video/upload/v1711391404/xfl0r1vhclseim8ioi2u.mp4",
-    stack: ["MongoDB","Nextjs", "NextUI", "React", "Tailwind"],
+    video:
+      "https://res.cloudinary.com/dux0sb99g/video/upload/v1711391404/xfl0r1vhclseim8ioi2u.mp4",
+    stack: ["MongoDB", "Nextjs", "NextUI", "React", "Tailwind"],
     link: "https://miguelsalinasjuridico.com/",
     description: [
       "Pagina web desarrollada para un cliente, con el objetivo de publicar contenido jurídico",
@@ -24,7 +25,8 @@ const works = [
   },
   {
     name: "Pagina web para el capitulo estudiantil de la IEEE de la Universidad Nacional de San Agustin",
-    video: "https://res.cloudinary.com/dux0sb99g/video/upload/v1711391430/hzr2ulkgoc2xcreko5wm.mp4",
+    video:
+      "https://res.cloudinary.com/dux0sb99g/video/upload/v1711391430/hzr2ulkgoc2xcreko5wm.mp4",
     stack: ["Nextjs", "ShadCn", "React", "Tailwind", "TypeScript", "Vercel"],
     link: "https://ieee-ynoacamino.vercel.app/",
     description: [
@@ -42,9 +44,18 @@ const works = [
   },
   {
     name: "Tienda online (prototipo)",
-    video: "https://res.cloudinary.com/dux0sb99g/video/upload/v1711391354/z4fuhocrihr3se64xflx.mp4",
-    stack: ['Nextjs', 'React', 'Prisma', 'Tailwind', 'MercadoPago', 'Cloudinary', 'Shadcn'],
-    link: 'https://e-commerce-ynoacamino.vercel.app/',
+    video:
+      "https://res.cloudinary.com/dux0sb99g/video/upload/v1711391354/z4fuhocrihr3se64xflx.mp4",
+    stack: [
+      "Nextjs",
+      "React",
+      "Prisma",
+      "Tailwind",
+      "MercadoPago",
+      "Cloudinary",
+      "Shadcn",
+    ],
+    link: "https://e-commerce-ynoacamino.vercel.app/",
     description: [
       "Tienda online desarrollada como prototipo, para mostrar las funcionalidades de una tienda online",
       "Se desarrollo un sistema de autenticación, para que los usuarios puedan registrarse, iniciar sesión y cerrar sesión",
@@ -59,14 +70,23 @@ const works = [
       "Sistema de carrito de compras",
       "Sistema de pagos",
       "Sistema de administración de productos",
-      "Tema oscuro"
+      "Tema oscuro",
     ],
   },
   {
     name: "Administrador de tienda online (prototipo)",
-    video: "https://res.cloudinary.com/dazt6g3o1/video/upload/v1711391193/k43naabhv5kvquzzajhc.mp4",
-    stack: ['Nextjs', 'React', 'Prisma', 'Tailwind', 'MercadoPago', 'Cloudinary', 'Shadcn'],
-    link: 'https://admin-e-commerce-ynoacamino.vercel.app/',
+    video:
+      "https://res.cloudinary.com/dazt6g3o1/video/upload/v1711391193/k43naabhv5kvquzzajhc.mp4",
+    stack: [
+      "Nextjs",
+      "React",
+      "Prisma",
+      "Tailwind",
+      "MercadoPago",
+      "Cloudinary",
+      "Shadcn",
+    ],
+    link: "https://admin-e-commerce-ynoacamino.vercel.app/",
     description: [
       "Administrador de tienda online desarrollado como prototipo, para mostrar las funcionalidades de un administrador de tienda online",
       "Se desarrollo un sistema de autenticación, para que solo los administradores puedan iniciar sesión y cerrar sesión (actulamente funciona para cualquier usuario, para que lo puedan probar)",
@@ -78,7 +98,7 @@ const works = [
       "Sistema de autenticación",
       "Sistema de administración de productos",
       "Sistema de administración de usuarios",
-      "Tema oscuro"
+      "Tema oscuro",
     ],
   },
 ];
@@ -86,16 +106,17 @@ const works = [
 
 <div class="flex flex-col items-center my-20">
   <H1 id="trabajos">TRABAJOS</H1>
-  <div class="grid grid-cols-1  gap-8 justify-items-center max-w-5xl">
+  <div class="grid md:grid-cols-2 gap-8 justify-items-center max-w-5xl">
     {
       works.map((w) => (
         <WorkCard
           name={w.name}
           video={w.video}
-          link={w.link} 
+          link={w.link}
           stack={w.stack}
           description={w.description}
           important_points={w.important_points}
+          client:load
         />
       ))
     }

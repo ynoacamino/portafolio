@@ -17,18 +17,5 @@
     "react/prop-types"    : 0,
     "no-undef": 0
   },
-  "overrides": [
-    {
-      "files": ["*.astro"],
-      "extends": ["airbnb"],
-      "parser": "astro-eslint-parser",
-      "parserOptions": {
-        "parser": "@typescript-eslint/parser",
-        "extraFileExtensions": [".astro"]
-      },
-      "rules": {
-        "react/prop-types": 0
-      }
-    }
-  ]
+  "ignorePatterns": ["*.astro"]
 }

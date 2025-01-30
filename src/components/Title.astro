@@ -1,47 +1,53 @@
 ---
-import Perfil from '../components/Perfil.astro';
-import Name from './react/Name';
-import SocialIcon from './react/SocialIcon';
+import Perfil from "../components/Perfil.astro";
+import Name from "./react/Name";
+import SocialIcon from "./react/SocialIcon";
 
 const socialReds = [
   {
     link: "https://github.com/ynoacamino",
     name: "github",
-    src: '/github.svg',
+    src: "/github.svg",
   },
   {
     link: "https://www.instagram.com/ynoacamino/",
     name: "instagram",
-    src: '/instagram.svg',
+    src: "/instagram.svg",
   },
   {
     link: "https://api.whatsapp.com/send?phone=51935761921",
     name: "whatsapp",
-    src: '/icons/whatsapp.svg',
+    src: "/icons/whatsapp.svg",
   },
   {
     link: "https://www.linkedin.com/in/yenaro-noa-camino-06775a240/",
     name: "linkedin",
-    src: '/linkedin.svg',
-  }
-]
+    src: "/linkedin.svg",
+  },
+];
 ---
 
-<div class="flex flex-col lg:flex-row justify-start lg:justify-between items-center py-16 min-h-[85vh] relative">
-  <div class="text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl flex flex-col font-semibold  gap-2 min-w-fit z-10">
-    <h1 class="flex flex-col gap-2">    
+<div
+  class="flex flex-col lg:flex-row justify-start lg:justify-between items-center py-16 min-h-[85vh] relative"
+>
+  <div
+    class="text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl flex flex-col font-semibold gap-2 min-w-fit z-10"
+  >
+    <h1 class="flex flex-col gap-2">
       <Name client:load />
-      <span class="text-center lg:text-left">
-        Desarrollador web
-      </span>
-      <span class="text-center lg:text-left text-[1.9rem] md:text-[44px] xl:text-6xl 2xl:text-7xl">
+      <span class="text-center lg:text-left"> Desarrollador web </span>
+      <span
+        class="text-center lg:text-left text-[1.9rem] md:text-[44px] xl:text-6xl 2xl:text-7xl"
+      >
         Estudiante de Ingeniería
       </span>
     </h1>
-    <div class="flex gap-4 my-5 ml-5 items-center justify-center lg:justify-start">
+    <div
+      class="flex gap-4 my-5 ml-5 items-center justify-center lg:justify-start"
+    >
       {
         socialReds.map((i) => (
-          <SocialIcon link={i.link} name={i.name} src={i.src} client:load/>
+          <SocialIcon link={i.link} name={i.name} src={i.src} client:load />
         ))
       }
     </div>
@@ -49,7 +55,9 @@ const socialReds = [
   <div class="w-full mt-[-50px] lg:mt-[-110px] max-w-md">
     <Perfil />
   </div>
-  <div class="absolute bottom-0 flex justify-center items-center right-0 left-0">
+  <div
+    class="absolute bottom-0 flex justify-center items-center right-0 left-0"
+  >
     <img
       src="/down.svg"
       alt=""
@@ -58,6 +66,4 @@ const socialReds = [
     />
   </div>
 </div>
-<style is:global>
-
-</style>
+<style is:global></style>

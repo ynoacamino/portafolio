@@ -17,10 +17,10 @@ export default function NavBarMobile() {
       <nav className={`flex flex-col items-center justify-center gap-4 fixed h-screen z-[1000]
         w-screen bg-one dark:bg-one-dark top-0 left-0 ${isOpen || 'left-[-100vh] opacity-0'} md:hidden transition-all`}
       >
-        <ButtonLink>Trabajos</ButtonLink>
-        <ButtonLink>Proyectos</ButtonLink>
-        <ButtonLink>Tecnologías</ButtonLink>
-        <ButtonLink>Certificados</ButtonLink>
+        <ButtonLink href="/#trabajos">Trabajos</ButtonLink>
+        <ButtonLink href="/#proyectos">Proyectos</ButtonLink>
+        <ButtonLink href="/#tecnologias">Tecnologías</ButtonLink>
+        <ButtonLink href="/#certificados">Certificados</ButtonLink>
         <button type="button" aria-label="salir" className="w-9 mt-20" onClick={handleClick}>
           <ExitButton />
         </button>

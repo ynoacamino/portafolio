@@ -5,48 +5,47 @@ const socialReds = [
   {
     link: "https://github.com/ynoacamino",
     name: "GitHub",
-    src: '/github.svg',
+    src: "/github.svg",
   },
   {
     link: "https://www.instagram.com/ynoacamino/",
     name: "Instagram",
-    src: '/instagram.svg',
+    src: "/instagram.svg",
   },
   {
     link: "https://api.whatsapp.com/send?phone=51935761921",
     name: "Whatsapp",
-    src: '/icons/whatsapp.svg',
+    src: "/icons/whatsapp.svg",
   },
   {
     link: "https://www.linkedin.com/in/yenaro-noa-camino-06775a240/",
     name: "Linkedin",
-    src: '/linkedin.svg',
-  }
-]
+    src: "/linkedin.svg",
+  },
+];
 ---
 
-<footer class=" flex justify-center items-center p-10 py-32">
-  <div class="w-full max-w-5xl flex flex-col justify-center items-center gap-16">
+<footer class="flex justify-center items-center p-10 py-32">
+  <div
+    class="w-full max-w-5xl flex flex-col justify-center items-center gap-16"
+  >
     <div class="flex flex-col gap-3 justify-center items-center">
       <span class="text-5xl md:text-7xl font-bold text-center">
         Gracias por visitar
       </span>
       <div class="text-gray-800 flex flex-col ml-5 font-semibold">
-        <span>
-          Hecho por @ynoacamino el 20 de noviembre
-        </span>
+        <span> Hecho por @ynoacamino el 20 de noviembre </span>
       </div>
     </div>
-    <div class=" flex gap-6 flex-wrap justify-center items-center">
+    <div class="flex gap-6 flex-wrap justify-center items-center">
       {
         socialReds.map((d) => (
           <ButtonLink href={d.link} target noWidth>
-            <img src={d.src} alt={d.name} class="w-7 invert" />
-            {d.name}
+            <img src={d.src} alt={d.name} class="w-6 invert" />
+            <span>{d.name}</span>
           </ButtonLink>
         ))
       }
     </div>
   </div>
-
 </footer>

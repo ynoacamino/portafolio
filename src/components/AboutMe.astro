@@ -1,21 +1,17 @@
 ---
 import H1 from "./H1.astro";
-import Carrucel from './react/Carrucel';
+import Carrucel from "./react/Carrucel";
 ---
 
 <div class="flex flex-col justify-start items-center my-20">
-  <H1 id="sobre-mi">
-    SOBRE MI
-  </H1>
-  <div class="flex flex-col lg:grid grid-cols-2 justify-center gap-y-5 gap-x-10 w-full max-w-md lg:max-w-5xl min-h-[492px]">
-    <Carrucel client:load/>
+  <H1 id="sobre-mi"> SOBRE MI </H1>
+  <div
+    class="flex flex-col lg:grid grid-cols-2 justify-center gap-y-5 gap-x-10 w-full max-w-md lg:max-w-5xl min-h-[492px]"
+  >
+    <Carrucel client:load />
     <div class="text-4xl font-semibold flex flex-col">
-      <span class="">
-        Mi nombre es
-      </span>
-      <span class="font-bold">
-        Yenaro Joel Noa Camino
-      </span>
+      <span class=""> Mi nombre es </span>
+      <span class="font-bold"> Yenaro Joel Noa Camino </span>
       <span class="text-2xl mt-5 leading-relaxed flex flex-col gap-3">
         <span>
           Hola, soy estudiante de Ingeniería de
@@ -24,7 +20,9 @@ import Carrucel from './react/Carrucel';
           </span>.
         </span>
         <span>
-          Actualmente llevo un aprendizaje autodidacta como <span class="font-bold">desarrollador web</span>. Espero te guste mi portafolio.
+          Actualmente llevo un aprendizaje autodidacta como <span
+            class="font-bold">desarrollador web</span
+          >. Espero te guste mi portafolio.
         </span>
       </span>
     </div>
