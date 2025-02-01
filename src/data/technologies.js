@@ -1,5 +1,9 @@
 export const technologies = [
   {
+    name: 'Docker',
+    src: 'Docker.svg',
+  },
+  {
     name: 'Vite',
     src: 'Vite.svg',
   },

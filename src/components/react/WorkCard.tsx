@@ -17,9 +17,7 @@ export default function WorkCard(
   return (
     <Dialog>
       <DialogTrigger>
-        <div
-          className="w-full rounded-md border-[1px] border-zinc-400 shadow-lg shadow-zinc-200 dark:shadow-zinc-950"
-        >
+        <div className="w-full rounded-md border-[1px] border-zinc-400 shadow-lg shadow-zinc-200 dark:shadow-zinc-950 relative group">
           <video
             preload="none"
             autoPlay
@@ -30,7 +28,12 @@ export default function WorkCard(
             <source src={video} type="video/mp4" />
             VideoIndex no disponible
           </video>
+
+          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-65 text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl font-bold">
+            Ver más
+          </div>
         </div>
+
       </DialogTrigger>
       <DialogContent className="max-w-5xl">
         <DialogHeader>
@@ -43,24 +46,26 @@ export default function WorkCard(
           </DialogTitle>
         </DialogHeader>
         <ScrollArea
-          className="w-full rounded-md max-h-[23rem] md:max-h-[60vh] h-full"
+          className="w-full rounded-md max-h-[70vh] md:max-h-[78vh] h-full"
         >
           <div className="w-full flex justify-center">
-            <video
-              preload="none"
-              autoPlay
-              muted
-              loop
-              className="rounded-md videoIndex aspect-video object-cover w-full max-w-md shadow-lg border-[1px] border-zinc-400"
+            <a href={link} target="_blank">
+              <video
+                preload="none"
+                autoPlay
+                muted
+                loop
+                className="rounded-md videoIndex object-cover w-full max-w-md shadow-lg border-[1px] border-zinc-400"
               >
-              <source src={video} type="video/mp4" />
-              VideoIndex no disponible
-            </video>
+                <source src={video} type="video/mp4" />
+                VideoIndex no disponible
+              </video>
+            </a>
           </div>
           <div className="p-6 text-lg flex md:flex-row flex-col gap-y-6 items-center">
             <div className="flex-1">
               <div className="text-zinc-600 dark:text-zinc-400 flex flex-col gap-2">
-                {description.map((des) => <p>{des}</p>)}
+                {description.map((des) => <p key={des}>{des}</p>)}
               </div>
               <div
                 className="grid grid-cols-1 lg:grid-cols-3 mt-4 w-full max-w-2xl gap-y-4"

@@ -6,7 +6,7 @@ export default function PopoverIcon({ s }) {
   return (
     <Tooltip
       placement="top"
-      className="shadow-lg shadow-zinc-300 dark:shadow-zinc-800"
+      className="shadow-lg shadow-zinc-300 dark:shadow-zinc-800 bg-white"
       content={(
         <div className="px-1 py-2">
           <div className="text-xl font-semibold">{s}</div>
