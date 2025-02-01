@@ -8,9 +8,7 @@ Desarrollador Web | Estudiante de Ingeniería de Sistemas
 
 ## 🌟 SOBRE MÍ
 
-<img src="https://ynoa-uploader.ynoacamino.site/uploads/1738436732_image.png"
-  alt="Foto de Perfil"
-  width="350">
+<img src="https://ynoa-uploader.ynoacamino.site/uploads/1738437395_image%20%281%29.webp" alt="Foto de Perfil" width="350">
 
 ¡Hola! Soy **Yenaro Joel Noa Camino**, estudiante de **Ingeniería de Sistemas** en la **Universidad Nacional de San Agustín de Arequipa**. Actualmente, estoy en un proceso autodidacta como **desarrollador web**, y este portafolio refleja algunos de mis proyectos y habilidades que he ido adquiriendo.
 
