@@ -1,12 +1,42 @@
 ---
-import Card from "./Card.astro";
+// import Card from "./Card.astro";
 import H1 from "./H1.astro";
 import WorkCard from "../components/react/WorkCard";
 
 const works = [
   {
+    name: "Página de canvas colaborativo TECHART",
+    video:
+      "https://ynoa-uploader.ynoacamino.site/uploads/1749780865_timelapse.mp4",
+    stack: [
+      "React",
+      "Next.js",
+      "TailwindCSS",
+      "TypeScript",
+      "Framer Motion",
+      "SQLite",
+    ],
+    link: "https://techart.ynoacamino.site/",
+    description: [
+      "Página web desarrollada para el evento TechArt, fruto de la colaboración entre IEEE Student Branch UNSA y HDC - Centro de Arte UNSA.",
+      "TechArt fue una experiencia interactiva donde estudiantes de la UNSA plasmaron su creatividad en un lienzo pixelado colaborativo, inspirado en Reddit Place.",
+      "La plataforma permitió edición en tiempo real por usuarios autenticados y registró más de 450 participantes únicos en solo 3 días.",
+      "El sistema fue optimizado para rendimiento, estabilidad y visualización dinámica del lienzo, fomentando el sentido de comunidad universitaria.",
+    ],
+    important_points: [
+      "Diseño y desarrollo de la página web",
+      "Optimización para motores de búsqueda (SEO)",
+      "Reconeccion automatica, con websockets y Socket.io",
+      "Sistema de diseño escalable con TailwindCSS",
+      "Tipado estático con TypeScript",
+      "Uso de animaciones fluidas con Framer Motion",
+      "Buena accesibilidad para mobile y touchpad",
+    ],
+  },
+  {
     name: "Página Web de la Startup Inveztiga",
-    video: "https://ynoa-uploader.ynoacamino.site/uploads/1738433706_2025-02-01%2013-13-36.mkv",
+    video:
+      "https://ynoa-uploader.ynoacamino.site/uploads/1738433706_2025-02-01%2013-13-36.mkv",
     stack: [
       "React",
       "Next.js",
@@ -14,14 +44,14 @@ const works = [
       "TypeScript",
       "Framer Motion",
       "PocketBase",
-      "SQLite"
+      "SQLite",
     ],
     link: "https://inveztiga.ynoacamino.site/",
     description: [
       "Página web desarrollada para la startup Inveztiga como parte del concurso WICHARY de la incubadora JAKU.",
       "Inveztiga es una plataforma de enseñanza de aptitudes y habilidades para la investigación científica en Perú.",
       "Utiliza tecnologías de punta, incluyendo inteligencia artificial, para mejorar la enseñanza.",
-      "La página web fue optimizada para SEO y accesibilidad, permitiendo una experiencia fluida para los usuarios."
+      "La página web fue optimizada para SEO y accesibilidad, permitiendo una experiencia fluida para los usuarios.",
     ],
     important_points: [
       "Diseño y desarrollo de la página web",
@@ -30,12 +60,13 @@ const works = [
       "Selector de tema (Modo claro, oscuro y automático)",
       "Sistema de diseño escalable con TailwindCSS",
       "Tipado estático con TypeScript",
-      "Uso de animaciones fluidas con Framer Motion"
-    ]
+      "Uso de animaciones fluidas con Framer Motion",
+    ],
   },
   {
     name: "IEEE Certificate Validator",
-    video: "https://ynoa-uploader.ynoacamino.site/uploads/1738433137_1738099968_New%20Project.mp4",
+    video:
+      "https://ynoa-uploader.ynoacamino.site/uploads/1738433137_1738099968_New%20Project.mp4",
     stack: [
       "React",
       "Next.js",
@@ -43,14 +74,14 @@ const works = [
       "TypeScript",
       "Lucide React",
       "PocketBase",
-      "SQLite"
+      "SQLite",
     ],
     link: "https://certificates-validator.ynoacamino.site",
     description: [
       "Página web desarrollada para la validación de certificados de la IEEE UNSA.",
       "Permite a los usuarios verificar la autenticidad de sus certificados de manera rápida y sencilla.",
       "El sistema utiliza una base de datos en PocketBase, con una API RESTful ligera y eficiente para gestionar los certificados.",
-      "Incluye funcionalidades para descargar y compartir certificados en redes sociales."
+      "Incluye funcionalidades para descargar y compartir certificados en redes sociales.",
     ],
     important_points: [
       "Diseño y desarrollo de la página web",
@@ -59,8 +90,8 @@ const works = [
       "Renderizado del lado del servidor (SSR) con Next.js",
       "Sistema de temas (Modo claro, oscuro y automático)",
       "Tipado estático con TypeScript",
-      "Panel intuitivo para compartir y descargar certificados"
-    ]
+      "Panel intuitivo para compartir y descargar certificados",
+    ],
   },
   {
     name: "Página de divulgación jurídica",
@@ -102,29 +133,30 @@ const works = [
   },
   {
     name: "Alerta UNSA de Talón de Pago",
-    video: "https://ynoa-uploader.ynoacamino.site/uploads/1738433935_2025-02-01%2013-18-18.mkv",
+    video:
+      "https://ynoa-uploader.ynoacamino.site/uploads/1738433935_2025-02-01%2013-18-18.mkv",
     stack: [
       "Next.js",
       "TypeScript",
       "Tailwind CSS",
       "NextAuth.js",
       "Context API",
-      "Lucide-react"
+      "Lucide-react",
     ],
     link: "https://github.com/ynoacamino/ynoacamino-alert-page",
     description: [
       "Aplicación web para notificar la disponibilidad del talón de pago de la UNSA.",
       "Envía notificaciones por correo electrónico y WhatsApp.",
       "Cuenta con un dashboard para visualizar el estado de las consultas.",
-      "Permite autenticación con Google mediante NextAuth.js."
+      "Permite autenticación con Google mediante NextAuth.js.",
     ],
     important_points: [
       "Interfaz moderna con Tailwind CSS y Next.js",
       "Dashboard dinámico con estados visuales",
       "Menú lateral responsive y cambio de tema",
       "Manejo de sesiones con NextAuth.js",
-      "Barra de progreso para mejor experiencia de usuario"
-    ]
+      "Barra de progreso para mejor experiencia de usuario",
+    ],
   },
   {
     name: "Tienda online (prototipo)",
